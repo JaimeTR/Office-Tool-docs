@@ -35,7 +35,13 @@ module.exports = {
 			lang: 'zh-TW',
 			title: 'Office Tool Plus Docs',
 			description: 'Office Tool Plus 協助文件'
+		},
+		'/zh-es/': {
+			lang: 'zh-ES',
+			title: 'Office Tool Plus Docs',
+			description: 'Office Tool Plus documentación.'
 		}
+
 	},
 	themeConfig: {
 		repo: 'YerongAI/Office-Tool',
@@ -193,7 +199,58 @@ module.exports = {
 						''
 					]
 				}
-			}
+			},
+			'/zh-es/': {
+				selectText: 'Selecciona el idioma',
+				label: 'Español',
+				editLinkText: 'Editar en GitHub',
+				serviceWorker: {
+					updatePopup: {
+						message: "Se ha encontrado una nueva versión del sitio.",
+						buttonText: "Actualizar"
+					}
+				},
+				nav: [
+					{ text: 'Introducción', link: '/zh-es/start/' },
+					{ text: 'Deploy', link: '/zh-es/deploy/' },
+					{ text: 'Activar', link: '/zh-es/activate/' },
+					{ text: 'Más', link: '/zh-es/others/toolbox' },
+					{ text: 'Blog', link: 'https://www.coolhub.top' },
+					{ text: 'Cotpear', link: 'https://www.cotpear.com?utm_source=docs-otp-web' },
+					{
+						text: 'Grupos', items: [
+							{ text: 'Telegram: 713837704', link: 'https://otp.landian.vip/grouplink/qq.html' },
+							{ text: 'Telegram: ot_channel_es', link: 'https://t.me/ot_channel_es' },
+							{ text: 'OTP: otp-es', link: 'https://go.cotpear.com/otp-es' },
+						]
+					}
+				],
+				sidebar: {
+					'/zh-es/start/': [
+						'',
+						'requirement',
+						'download'
+					],
+					'/zh-es/deploy/': [
+						'',
+						'configuration-options',
+						'create-iso',
+						'faq'
+					],
+					'/zh-es/activate/': [
+						'',
+						'faq'
+					],
+					'/zh-es/others/': [
+						'toolbox',
+						'converter',
+						''
+					],
+					'/zh-es/': [
+						''
+					]
+				}
+			},
 		}
 	}
 }
