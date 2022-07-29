@@ -1,124 +1,185 @@
-# 更多資訊
+# More
 
-## Office Tool Plus 設定
+## Application Settings
 
-如需儲存 Office Tool Plus 的設定，例如介面語言、主題或背景圖片設定，請勾選 [儲存個人偏好設定] 選項。
+### Save settings to local
 
-「進階設定」中可以變更語言顯示的格式，和開啟更進階的功能。
+Check it will save application settings, such as language, theme and background image settings.
 
-### 語言顯示設定
+### Language display name
 
-預設情況下，Office Tool Plus 顯示語言為當地格式，例如 English (United States)。
+By default, Office Tool Plus displays the native name of languages.
 
-- 預設：不進行任何更改，按照預設的格式顯示。
-- 當地語言：顯示語言的當地名稱，例如英語是 English，德文是：Deutsch
-- 英文名稱：顯示語言的英文名稱，例如中文是 Chinese，德文是：German
-- 本機語言：依照系統語言設定顯示，例如你的系統語言是中文，那麼所有的語言都顯示為中文。
+- Normal: Display in default format.
+- Native name: Display the native name of languages.
+- English name: Display the languages name in English.
+- Localized name: Display according to the system language setting. If your system language is English, all of the languages will display in English.
 
-當地語言、英文名稱以及本機語言由 Windows 提供數據，不同版本的 Windows 顯示結果可能不同。
+Language names are data provided by Windows and may be displayed differently by different versions of Windows.
 
-::: tip 提醒
-如要變更預設值，您需要重新啟動應用程式方能生效。
+::: tip Tip
+To change the language display name to normal, you need to restart application to take effect.
 :::
 
-### 進階功能
+### Advanced features
 
-啟用此選項後，Office Tool Plus 將會載入 Office 內部通道和內部產品，例如 Dogfood 通道和 Mondo 2016 產品。
+By checking it, Office Tool Plus will loading the internel channels and products, such as Dogfood channel and Mondo 2016 product.
 
-## Office Tool Plus 快速鍵
+## Office Tool Plus shortcut keys
 
-- <kbd>Esc</kbd>: 返回
-- <kbd>F1</kbd>: 檢視協助文件
-- <kbd>F5</kbd>: 重新載入資訊/重設配置 (僅部署功能頁)
-- <kbd>Ctrl + 1</kbd>: 切換到部署功能頁
-- <kbd>Ctrl + 2</kbd>: 切換到啟用功能頁
-- <kbd>Ctrl + 3</kbd>: 切換到工具箱功能頁
-- <kbd>Ctrl + 4</kbd>: 切換到轉換文件功能頁
-- <kbd>Ctrl + T</kbd>: 檢視設定
-- <kbd>Ctrl + B</kbd>: 檢視關於
-- <kbd>Ctrl + L</kbd>: 安裝 iSlide (僅部署功能頁)
-- <kbd>Ctrl + Shift + D</kbd>: 忽略警告或錯誤，強制進行部署 (僅部署功能頁)
+### V9
 
-## Office Tool Plus 命令區指令
+- <kbd>F1</kbd>: Help.
+- <kbd>F5</kbd>: Refresh Office information and reset deploy settings (on deploy page).
+- <kbd>Ctrl + 1</kbd>: Switch to home page.
+- <kbd>Ctrl + 2</kbd>: Switch to deploy page.
+- <kbd>Ctrl + 3</kbd>: Switch to activate page.
+- <kbd>Ctrl + 4</kbd>: Switch to toolbox page.
+- <kbd>Ctrl + 5</kbd>: Switch to documents converter.
+- <kbd>Ctrl + T</kbd>: Display setting page.
+- <kbd>Ctrl + B</kbd>: Display about page.
+- <kbd>Ctrl + L</kbd>: Install iSlide (on deploy page).
+- <kbd>Ctrl + Shift + D</kbd>: Ignore errors or warnings, force start deploy (on deploy page).
 
-命令不區分大小寫，按照輸入順序執行。如果路徑中含有空格，請使用 "" (英文雙引號) 將路徑包括起來。
+### V8
 
-### 命令區指令
+- <kbd>Esc</kbd>: Back.
+- <kbd>F1</kbd>: Help.
+- <kbd>F5</kbd>: Refresh Office information and reset deploy settings (on deploy page).
+- <kbd>Ctrl + 1</kbd>: Switch to deploy page.
+- <kbd>Ctrl + 2</kbd>: Switch to activate page.
+- <kbd>Ctrl + 3</kbd>: Switch to toolbox page.
+- <kbd>Ctrl + 4</kbd>: Switch to documents converter.
+- <kbd>Ctrl + T</kbd>: Display setting page.
+- <kbd>Ctrl + B</kbd>: Display about page.
+- <kbd>Ctrl + L</kbd>: Install iSlide (on deploy page).
+- <kbd>Ctrl + Shift + D</kbd>: Ignore errors or warnings, force start deploy (on deploy page).
 
-| 指令 | 說明 |  |
+## Office Tool Plus In-application commands
+
+The commands are case-insensitive and are executed in the order they are entered. If the path contains spaces, use "" (double quotes) to include the path.
+
+### Office Tool Plus Console Helper
+
+Office Tool Plus.Console is a command line program. By default, when executing a command through Office Tool Plus, the CMD will return immediately and will not wait for Office Tool Plus to exit. Office Tool Plus.Console will wait for the program to exit and supports outputting the log when executing commands.
+
+Here is a example to enable logging output for Office Tool Plus:
+
+``` batch
+"Office Tool Plus.Console" /enableLog
+```
+
+Here is a example to install Office 2021 Pro Plus (online installation):
+
+``` batch
+"Office Tool Plus.Console" deploy /addProduct ProPlus2021Volume_zh-cn_Access,Outlook,OneNote /channel PerpetualVL2021
+```
+
+If you want to install Office using offline installation, use */sourcePath* to specify the location of Office installation, use */version* to specify the Office version:
+
+``` batch
+"Office Tool Plus.Console" deploy /addProduct ProPlus2021Volume_zh-cn_Access,Outlook,OneNote /channel PerpetualVL2021 /sourcePath "D:\Office Tool" /version 16.0.00000.00000
+```
+
+Here is a example to activate Office 2021 Pro Plus via KMS:
+
+``` batch
+"Office Tool Plus.Console" ospp /insLicID ProPlus2021Volume /sethst:kms.example.com /setprt:1688 /act
+```
+
+You can run deploy commands first, then ospp commands. The Office will be installed and activated automated.
+
+::: tip Tip
+The deploy and ospp commands enable logging by default, you do not need to specify the /enableLog parameter again. deploy and ospp commands cannot be mixed with other commands, or they will not be recognized.
+:::
+
+### Application commands
+
+| Command | Description |  |
 | :-- | :-- | :-- |
-| /setImage value | 設定背景圖 | value: 路徑, 支援 PNG, JPG。<br>支援本機和 HTTP 路徑。 |
-| /getKey value | 取得產品預設金鑰 | value: 產品識別碼。 |
-| /resetNotif | 重設通知以再次顯示已關閉的通知。 | |
-| /loadConfig value | 從網際網路載入 XML 配置檔案。 | value: 網址。 |
+| /setImage value | Set background image. | value: path, support PNG or JPG. Support local or HTTP path. |
+| /getKey value | Get product default key. | value: product ID. |
+| /getBWP | Get Bing wallpaper. |  |
+| /resetNotif | Reset notifications to show closed notifications again. | |
+| /loadConfig value | Load XML config from web. | value: url. |
 
-### 部署指令
+::: warning Warning
+/getkey command was removed on V9, please visit [products information](https://www.coolhub.top/tech-articles/products.html) to get the keys.
+:::
+
+### Deploy commands
 
 deploy [options]
 
-使用部署指令時，您需要指定為 deploy，然後再寫參數，例如:
+When using the deploy command, you need to specify it as deploy and then write the parameters, for example, the following is a simple deploy command.
 
 ``` batch
 deploy /addProduct O365ProPlusRetail
 ```
 
-| 指令 | 說明 |  |
+| Command | Description |  |
 | :-- | :-- | :-- |
-| /addProduct value | 新增產品 | value: productID_language_excludeApps_MAK。<br>其中 productID 為必要參數。<br>詳細使用方法見下方的部署範例。 |
-| /removeProduct value | 移除產品 | value: productID_language。<br>使用方式同 /addProduct |
-| /removeAll | 移除全部產品 |  |
-| /channel value | 設定頻道 | value: 頻道識別碼。[檢視詳細資訊](https://docs.microsoft.com/zh-tw/deployoffice/office-deployment-tool-configuration-options#channel-attribute-part-of-add-element) |
-| /clientEdition value | 設定架構 | value: 32, 64。 |
-| /migrateArch | 變更架構 |  |
-| /version value | 設定 Office 版本編號 | value: Office 版本編號。 |
-| /sourcePath value | 設定來源路徑屬性 | value: 路徑。支援本機, SMB 路徑。 |
-| /module value | 設定安裝模組 | value: 0, 1。<br>0: Office 部署工具，1: Office Tool Plus。 |
-| /downloadFirst | 設定下載後安裝。 |  |
-| /createShortcuts | 在桌面建立捷徑。 |  |
+| /addProduct value | Add product. | value: productID_language_excludeApps_MAK<br>productID is required.<br>See deploy examples below for details. |
+| /removeProduct value | Uninstall product. | value: productID_language<br>Same as /addProduct |
+| /removeAll | Uninstall all products. |  |
+| /channel value | Set channel. | value: channel ID, [see more](https://docs.microsoft.com/en-us/deployoffice/office-deployment-tool-configuration-options#channel-attribute-part-of-add-element). |
+| /clientEdition value | Set architecture. | value: 32 or 64。 |
+| /migrateArch | Migrate architecture. |  |
+| /version value | Set Office version | value: Office version. |
+| /sourcePath value | Set source path. | value: path, support local or SMB path. |
+| /display value | Display office installation interface. | value: true (Visible)，false (Hidden) |
+| /acceptEULA | Accept EULA for users. |  |
+| /module value | Set installation module. | value: 0 or 1。<br>0: Office Deployment Tool, 1: Office Tool Plus. |
+| /downloadFirst | Set install after download. |  |
+| /createShortcuts | Create desktop shortcuts. |  |
 
-#### 部署 Office 範例
+::: warning Warning
+/display and / acceptEULA commands only available on V9.
+:::
 
-在電腦上部署繁體中文版的 Office 專業增強版 2021 (大量授權版)，排除 Access, Outlook, OneNote:
+#### Deploy Office examples
+
+Deploy English edition of Office 2021 Pro Plus - Volume，excludes Access, Outlook, OneNote:
 
 ``` batch
-deploy /addProduct ProPlus2021Volume_zh-tw_Access,Outlook,OneNote /channel PerpetualVL2021
+deploy /addProduct ProPlus2021Volume_en-us_Access,Outlook,OneNote /channel PerpetualVL2021
 ```
 
-如果您需要為大量授權的產品設定 MAK 金鑰，您可以使用以下指令:
+If you want to set MAK, you can do like that:
 
 ``` batch
-deploy /addProduct ProPlus2021Volume_zh-tw_Access,Outlook,OneNote_XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /channel PerpetualVL2021
+deploy /addProduct ProPlus2021Volume_en-us_Access,Outlook,OneNote_XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /channel PerpetualVL2021
 ```
 
-如果你需要忽略某個參數，可以將其空白。例如不設定語言 (不建議這樣做):
+To ignore some attributes, leave blank like that:
 
 ``` batch
 deploy /addProduct ProPlus2021Volume__Access,Outlook,OneNote /channel PerpetualVL2021
 ```
 
-指定多個應用程式或語言時，您需要使用「英文逗號」將其隔開。例如 Access,Lync 或 zh-tw,en-us。
+When specifying multiple applications or languages, you need to use commas to separate them. Such as Access,Lync or zh-cn,en-us.
 
-如果需要新增多個產品，請指定多個 addProduct 參數。
+If you need to add more than one product, specify multiple addProduct parameters.
 
-如果需要新增語言套件或校訂工具，請使用 **LanguagePack** 或 **ProofingTools** 作為產品識別碼。
+If you need to add a language pack or proofreading tool, please use **LanguagePack** or **ProofingTools** as the product ID.
 
-### OSPP 命令
+### OSPP commands
 
 ospp [options]
 
-使用 OSPP 命令時，你需要指定為 OSPP，然後再寫參數，例如以下是一條簡單的激活命令：
+When using the OSPP command, you need to specify it as OSPP and then write the parameters, for example, the following is a simple OSPP command.
 
 ``` batch
 ospp /insLicID ProPlus2021Volume /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX /act
 ```
 
-| 指令 | 說明 | 使用方法 |
+| Command | Description | Usage |
 | :-- | :-- | :-- |
-| /insLicID value | 安裝指定產品的 Office 授權。 | /insLicID ProPlus2021Volume |
-| /inpkey:value | 安裝指定的 Office 金鑰。 | /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX |
-| /unpkey:value | 移除指定的 Office 金鑰(輸入後五碼)。 | /unpkey:XXXXX |
-| /sethst:value | 設定 KMS 主機位址。 | /sethst:kms.example.com |
-| /setprt:value | 設定 KMS 連接埠，預設 1688. | /setprt:1688 |
-| /act | 啟用 Office 產品。 | /act |
+| /insLicID value | Installs licenses with user-provided product ID. | /insLicID ProPlus2021Volume |
+| /inpkey:value | Installs a product key. | /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX |
+| /unpkey:value | Uninstalls an installed product key. | /unpkey:XXXXX |
+| /sethst:value | Sets a KMS host name. | /sethst:kms.example.com |
+| /setprt:value | Sets a KMS port, normal value is 1688. | /setprt:1688 |
+| /act | Activates installed Office product keys. | /act |
 
-有關 OSPP 的更多命令請參閱「[管理 Office 大量啟用的工具](https://docs.microsoft.com/zh-tw/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office)」。
+For more information please visit [OSPP documentation](https://docs.microsoft.com/en-us/deployoffice/vlactivation/tools-to-manage-volume-activation-of-office).

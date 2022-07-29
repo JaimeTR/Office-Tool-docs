@@ -1,17 +1,17 @@
-# 轉換文件
+# Document converter
 
-轉換文件功能是透過 Microsoft Office COM 完成的，系統必須安裝最新版的 Microsoft Office，否則功能可能會無法運作。
+Document conversion is using Office COM and requires the latest version of Office to be installed on your system, otherwise it may not work properly.
 
-系統轉檔期間，Microsoft Office 不會顯示任何視窗，僅會在系統後台運作。
+The Office applications will work in the background during conversion.
 
-某些 Office 設定或規則可能會影響到轉檔功能的運作。如有需要，您可以到 Office 應用程式中變更相關的設定。
+Some Office settings or policies may affect Office document conversions, you can change the Office settings if necessary.
 
-::: warning 注意
-Office Tool Plus 轉換文件的功能是基於 32 位元的 Office，在 64 位元的 Office 上可能無法正常使用。
+::: warning Warning
+Document converter are based on 32-bit Office and may not work properly on 64-bit Office.
 :::
 
-## 移除文件
+## Remove file(s) from list
 
-如果您不希望對某個已選取的文件進行轉檔，在列表中單擊選取該文件，然後右鍵點選 [刪除] 即可將該文件從轉檔列表中移除。
+Click an item in the list and right-click "Delete" to remove it from the list.
 
-如果您想要清空列表，使用 Ctrl + A 或者右鍵 [全選]，然後再右鍵 [刪除] 即可。
+Use Ctrl + A or right-click "Select All" and then right-click "Delete" to remove all items from list.

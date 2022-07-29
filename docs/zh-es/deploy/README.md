@@ -1,51 +1,53 @@
-# 部署 Office
+# Deploy Office
 
-部署 Office 時，安裝和解除安裝可以同時進行，因此您可以將多個步驟同時設定，無須分開執行。
+When deploying Office, installation and uninstallation can occur simultaneously, so you can combine multiple steps without having to perform them separately.
 
-## 線上安裝
+## Online installation
 
-開啟 Office Tool Plus，進入 [部署] 功能頁，然後進行以下配置：
+Open Office Tool Plus, go to deploy page, do the folowing things:
 
- - 新增產品
- - 新增語言套件
+- Add product.
+- Add language.
 
-您亦有可能需要進行以下配置：
+You may need to configure these options:
 
- - 選擇架構：使用 64 位元的 Office 能夠獲得更佳的數據處理性能，但有可能無法相容部分外掛或應用程式，更多說明請參閱「[選擇 64 位元或 32 位元版的 Office](https://support.microsoft.com/zh-tw/office/%E9%81%B8%E6%93%87-64-%E4%BD%8D%E5%85%83%E6%88%96-32-%E4%BD%8D%E5%85%83%E7%89%88%E7%9A%84-office-2dee7807-8f95-4d0c-b5fe-6c6f49b8d261)」。
- - 選擇頻道：如果您需要安裝 Office 2019/2021 大量授權版產品，您需要設定頻道至 [Office 2019/2021 永久企業版]；其他的產品使用 [目前通道] 即可。更多說明請見「[頻道詳細資訊](https://help.coolhub.top/zh-tw/deploy/configuration-options.html)」。
+- Architecture: [Click here for more information](https://help.coolhub.top/deploy/configuration-options.html#architecture).
+- Channel: If you want to install Office 2019/2021 Volume License products, you need to change channel to Office 2019/2021 Perpetual Enterprise. For more information please [see the details](https://help.coolhub.top/deploy/configuration-options.html#channels).
 
-配置完成且無顯示任何錯誤後，即可按下 [開始部署]。線上安裝會根據您的配置從 Office CDN 下載相應的安裝文件，因此下載的數據可能會比較少；但若您的網路品質不佳，可能會影響您的安裝體驗和下載用時。安裝完成後， Office 安裝文件即會自動清理及刪除。
+When everything is done, you can start deploy now. The Office installer will only download required files and install Office from Office CDN. Internet connection required, but may consume less data traffic. After installation, the installer will clean up the cache.
 
-## 離線安裝
+## Offline installation
 
-離線安裝亦需要依照 **「線上安裝」** 的配置方式進行操作，同時還必須進行以下設定：
+Do the following things:
 
- - 如果您使用的是 Office Tool Plus 所建立的 ISO 檔案，請在掛載或解壓縮後直接執行 Office Tool Plus 程式，然後參考「線上安裝」的步驟進行配置即可。
- - 如果您有 Office IMG 映像文件 (ISO)，掛載或解壓縮後在「安裝檔案管理」中點選 [選擇檔案]，然後任意選取一個 CAB 檔案即可。最後再參考「線上安裝」的步驟進行配置即可。
- - 如果您尚未下載 Office 安裝文件，則您應當勾選「部署設定」 > [下載後部署] 選項，此項會先下載 Office 安裝文件，再開始 Office 的安裝，但可能會消耗更多的數據流量。
+- If you are using the Office ISO created by Office Tool Plus, mount it or unpack it, open Office Tool Plus in the ISO, then deploy Office as online installation.
+- If you have Office image (iso) downloaded from other site, mount it or unpack it, then "Select file" on "Installation files management". Finally deploy Office as online installation.
+- If you have not yet downloaded the Office installation, check "Download first, then deploy" on "Deploy settings". Finally deploy Office as online installation. This may consume more data traffic. After installation, the installation files will store on ***Office Tool\Office*** folder.
 
-::: tip 提醒
-使用本地安裝檔案進行安裝時，您所能安裝的產品是由安裝文件所決定的，安裝配置的架構和頻道需與安裝文件搭配，否則將無法安裝。
+::: tip Note
+When you are using offline installation, the Office installation package determines which version of Office you can install.
 :::
 
-## 變更應用程式
+## Modifying applications
 
-若要新增一個應用程式，請將其選取；若要解除安裝一個應用程式，請將其取消選取。
+Check applications that you want to install. Uncheck applications that you want to uninstall.
 
-其他不需要變更的應用程式保持原設置即可。
+Keep others that you don't want to change.
 
-確認完畢後，點選 [開始部署] 即可。
+Start deploy.
 
-如果應用程式區中沒有您需要的程式 (例如 Access)，請新增一個產品，然後選取 Access 即可。
+If the applications does not have the items you want, such as Access, add a new product and select Access.
 
-## 升級現有的 Office
+## Upgrade Office
 
-如果您從別處取得了 Office 安裝文件，您僅需要在 [部署] 功能頁上，新增一個與目前已安裝的 Office 相同的產品，即可開始部署。
+Download Office installation from another PC, then make an ISO or copy the files to the client, add the same products as installed products, finally start deploy.
 
-## 變更架構
+## Migration architecture
 
-Office 部署工具支援將 32 位元的 Office 變更成 64 位元，一切自動化，步驟不再繁瑣。
+Office Deployment Tool supports changing Office from 32-bit to 64-bit (or 64-bit to 32-bit) automatically.
 
-首先將「架構」修改成欲變更的架構，例如您欲變更架構到 64 位元，即設定 [64 位元]。
+First change the architecture to the one you want. If you want to migrate to 64-bit Office, then select 64-bit now.
 
-接下來將 *「進階設定」>「升級設定」> [變更架構]* 勾選，然後開始部署即可。Office 部署工具會先將您目前的 Office 解除安裝，然後安裝 64 位元的 Office。
+Check *Advanced settings - upgrade settings - migrate architecture*, then start deploy.
+
+Office Deployment Tool will first uninstall your Office and then install the 64-bit Office.

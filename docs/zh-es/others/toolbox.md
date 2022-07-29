@@ -1,27 +1,27 @@
-# 工具箱
+# Toolbox
 
-我們在工具箱內設計了眾多小工具，來協助您解決各式 Office 問題。但無法保證這些工具式百分之百有效的。在某些嚴重的情況下，您可能需要重新安裝作業系統，才能解決問題。
+Toolbox can help you solve Office problems, but we cannot guarantee that these tools are 100% effective. In some severe cases, you may need to reinstall Windows to fix problems.
 
-## 變更 Office 更新頻道
+## Change Office update channel
 
-此功能可以變更 Office 更新頻道，從而實現不重新安裝 Office，而進行 Office 的升級/降級。
+You can change the Office update channel and upgrade/downgrade without Office installation.
 
-::: warning 注意
-Office 永久企業版通道已被鎖定，一般情況下無法變更，也無法從其他通道，變更到此通道。
+::: warning Warning
+You can't change Office update channel for Office 2019/2021 Volume products.
 :::
 
-## 測試 KMS 可用性
+## Check KMS status
 
-預設情況下，Office Tool Plus 使用 TCP 連線，測試 KMS 伺服器是否可以通訊，但無法檢測 KMS 伺服器是否正常工作。
+By default, Office Tool Plus uses a TCP connection to test the KMS host, it cannot detect that the KMS host is working properly or not.
 
-如果 Office Tool Plus 偵測到包含 vlmcs 模組，則會使用 vlmcs 進行更加詳細的測試，例如延遲和啟用結果。
+If Office Tool Plus detects a vlmcs component, it uses vlmcs for testing, including latency and activation results.
 
-vlmcs 模組包含在 with vlmcs 的 Office Tool Plus 版本中。
+[Click here to get vlmcs](https://download.coolhub.top/Extensions/Components/).
 
-## 解除安裝 Office
+## Remove Office
 
-此功能支援移除 Office 2003 - Office 最新版本，簡而言之，就是所有版本的 Office。
+Support for removing all versions of Office, including 2003 - 2021 and 365.
 
-如果在過程中出現了某些文件無法存取的問題，您可以多次執行操作，也可以手動找到文件刪除。
+If something went wrong, you can try again later, or delete the files manually.
 
-瞭解更多資訊請參閱「[從電腦解除安裝 Office](https://support.microsoft.com/zh-tw/office/%E5%BE%9E%E9%9B%BB%E8%85%A6%E8%A7%A3%E9%99%A4%E5%AE%89%E8%A3%9D-office-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8)」。
+For more information, see [Uninstall Office from a PC](https://support.microsoft.com/en-us/office/uninstall-office-from-a-pc-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8)

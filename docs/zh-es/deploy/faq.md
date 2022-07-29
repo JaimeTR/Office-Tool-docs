@@ -1,7 +1,7 @@
-# 疑難排解
+# FAQ
 
-## 在 Windows 7 或 Windows 8 中安裝 Office
+## Install Office on Windows 7 or Windows 8
 
-您沒有辦法在 Windows 7 或 Windows 8 中安裝 Office 2019 或 Office 2021 產品，其餘的套件或產品您皆可進行安裝，我們建議您設定 [目前通道] 進行部署。
+As we know, you can not install Office 2019/2021 on Windows 7 or Windows 8. We suggested to use "Current Channel" when installing Office.
 
-> 瞭解更多資訊請參閱「[Windows 8 終止支援和 Microsoft 365 Apps](https://docs.microsoft.com/zh-tw/deployoffice/endofsupport/windows-8-support)」、「[Windows 7 終止支援服務與 Microsoft 365 Apps](https://docs.microsoft.com/zh-tw/deployoffice/endofsupport/windows-7-support)」。
+> For more information please visit: [Windows 8 end of support and Microsoft 365 Apps](https://docs.microsoft.com/en-us/deployoffice/endofsupport/windows-8-support), [Windows 7 end of support and Microsoft 365 Apps](https://docs.microsoft.com/en-us/deployoffice/endofsupport/windows-7-support).

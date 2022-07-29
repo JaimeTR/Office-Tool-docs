@@ -1,19 +1,25 @@
-# 疑難排解
+# FAQ
 
-## 軟體授權服務報告指出授權使用失敗
+## The Software Licensing Service reported that license consumption failed
 
-錯誤代碼: 0xC004E015
+Error code: 0xC004E015
 
-### 解決方案
-
-自動處理: 到 [工具箱] 功能頁，使用「Office 無法正常啟用」工具嘗試修復，然後再重新啟用。
+Solution
 
 ---
 
-手動處理: 
+Automatic operation: Rebuild activation token, you can find the option in the Toolbox page. Then retry to activate Office.
 
-停用 `軟體保護平台` 服務，然後將 `C:\Windows\System32\spp\store\2.0` 資料夾下的 (.dat) 檔案全部刪除 (Windows Insider 的檔案名為 store_test)。
+---
 
-最後再重新啟用。
+Manual operation: Stop `Software Protection` service, delete dat files on `C:\Windows\System32\spp\store\2.0` (On Windows Insider, the folder name is store_test). Then retry to activate Office.
 
-**注意：如果問題並未解決，請稍待 3 分鐘後再繼續操作，以免問題復現，否則需要重新開始。**
+After installed Office licenses, wait three minutes. Then continue your operation.
+
+**If the problem is not resolved, you may need to try again.**
+
+## The Software Licensing Service reported that a token in the Token Store contains an invalid hash
+
+Error code: 0x8004E108
+
+Solution is same as the previous item.

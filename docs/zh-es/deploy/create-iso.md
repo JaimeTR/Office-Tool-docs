@@ -1,78 +1,78 @@
-# 建立 Office ISO
+# Create Office ISO
 
-透過建立 Office ISO 檔案，您可以輕鬆與他人共享 Office 安裝文件，適合公司用於大量、多次部署。
+Creating Office ISO files allows you to share Office with others, or use it for multiple installations.
 
-為了確保您得到最佳體驗，請確保您始終從我們的 [官方網站](https://otp.landian.vip/) 下載了最新的 with runtime 版本的 Office Tool Plus。
+For a better experience, please make sure you always download the latest version of Office Tool Plus which `includes runtime`.
 
-另外，我們也建議您在**每月的第二個星期二**更新一次 Office ISO 文件，使得 Office 能處在最新版本中。
+We recommend that you update your Office ISO once a month, in line with the Office update frequency.
 
-Office ISO 建立完成後，我們建議您檢查 ISO 檔案，以確保檔案能與您預期一樣正常使用。
+Anyway, it's suggested to test the ISO file by yourself when finished creating.
 
-::: tip 提醒
-with runtime 版本的 Office Tool Plus 允許您在沒有安裝 .NET Desktop Runtime 函式庫的情況下直接執行程式，這對於大量部署非常有幫助。
+::: tip Tip
+Using the version of Office Tool Plus which includes runtime allows you to run without the .NET Desktop Runtime installed, which is very helpful for multiple installations.
 :::
 
-## 建立包含預設配置的 Office ISO
+## Create Office ISO with default configuration
 
-開啟 Office Tool Plus，在 [部署] 功能頁，切換 [部署模式] 到 [建立 ISO 檔案]，并點選 [下載後再部署]。
+Open Office Tool Plus, on deploy page, change deployment mode to `Create ISO file`, also check `Download first, then deploy`.
 
-新增產品，按需求選擇 (例如 Office 2021 專業增強版 (大量授權) )。
+Add products as you want, such as Office Pro Plus 2021 - Volume License.
 
-新增語言套件，按需求選擇。如不新增，安裝時可能需要連線網際網路。
+Add languages as you want, if not, you need to connected to Internet when installing Office.
 
-根據需求修改架構、頻道設定，和其他進階設定。
+Change other settings if needed.
 
-**為了確保 Office 安裝檔案的完整性，我們建議您勾選 「下載設定」 -> [下載完成後驗證 Office 安裝文件]。**
+**To verify the Office installation, check "Verify Office installations files after download." on "Download settings"**.
 
-::: tip 提醒
-如果您需要為不同版本的 Windows 下載 Office (例如在 Windows 10 中下載 Office 安裝文件供 Windows 7 使用)，請變更 *「下載設定」 -> [系統標示]*，以對應目標 Windows 版本。
+::: tip Tip
+If you want to download Office for another version of Windows, for example, to download Office on Windows 10 for Windows 7, change *Download Settings - UA* to the corresponding system version.
 :::
 
-確認設定無誤後，點擊 [開始部署] 即可。
+Click "start deploy".
 
-使用此方式所建立的 Office ISO 將會包含預設配置，在 ISO 中執行 Office Tool Plus 時，會詢問用戶是否直接開始 Office 的安裝。
+The Office ISO created using this method contains the default configuration and asks the user to start the Office installation when opening Office Tool Plus.
 
-掛載 Office ISO 後，如果您需要直接開始安裝，您可以在 CD-ROM 右鍵選單中點選 [立即安裝] 按鈕。
+After mounted the Office ISO, you can find the "Install now" option in the context menu of the CD-ROM. This operation will start installation immediately.
 
-## 建立不含預設配置的 Office ISO
+## Create Office ISO without configuration
 
-開啟 Office Tool Plus，在 [部署] 功能頁，切換 [部署模式] 到 [下載]。
+Open Office Tool Plus, on deploy page, change deployment mode to `Download`.
 
-新增產品，按需求選擇 (例如 Office 2021 專業增強版 (大量授權) )。
+Add products as you want, such as Office Pro Plus 2021 - Volume License.
 
-新增語言套件，按需求選擇。如不新增，安裝時可能需要連線網際網路。
+Add languages as you want, if not, you need to connected to Internet when installing Office.
 
-根據需求修改架構、頻道設定，和其他進階設定。
+Change other settings if needed.
 
-**為了確保 Office 安裝檔案的完整性，我們建議您勾選 「下載設定」 -> [下載完成後驗證 Office 安裝文件]。**
+**To verify the Office installation, check "Verify Office installations files after download." on "Download settings"**.
 
-::: tip 提醒
-如果您需要為不同版本的 Windows 下載 Office (例如在 Windows 10 中下載 Office 安裝文件供 Windows 7 使用)，請變更 *「下載設定」 -> [系統標示]*，以對應目標 Windows 版本。
+::: tip Tip
+If you want to download Office for another version of Windows, for example, to download Office on Windows 10 for Windows 7, change *Download Settings - UA* to the corresponding system version.
 :::
 
-確認設定無誤後，點擊 [開始部署] 即可。
+Click "start deploy".
 
-下載完成後，按下 F5 鍵重設所有選項，亦可以在 [檢視代碼] 的子選單中找到 [重設] 選項。
+When finished downloading, press F5 to clear all configurations, also you can "refresh" on the submenu of "view XML code". After that, all products and languages should be clear.
 
-然後切換 「部署模式」 > [建立 ISO 檔案]，點擊 [開始部署] 即可。
+Finally change deployment mode to `Create ISO file`, then start deploy.
 
-## 更多資訊
+## More information
 
-### 如何同時下載 32 位元和 64 位元的 Office？
+### How to download both 32-bit and 64-bit of Offce?
 
-在下載 Office 安裝文件時，將 [架構] 從 [32 位元] 改選擇成 [64 位元] (反之亦然)，然後再次點選 [開始部署]，Office Tool Plus 會在目前的下載任務中，新增一項新下載任務，32 位元和 64 位元的 Office 會同時下載完畢。您也可以在下載完第一項位元版本後，再行下載另一項位元版本，Office Tool Plus 會自動略過已存在的檔案，僅下載缺失的檔案。
+When downloading Office, switch architecture from 32-bit to 64-bit, then click "start deploy" again. Also you can download 32-bit of Office first, then download 64-bit of Office. Office Tool Plus will skip to download the existing files.
 
-### Windows 沒有啟用自動播放的狀態下，如何使用一鍵安裝功能？
+### How can I use one-click installation without autoplay enabled?
 
-在某些情況下，客戶端上的 Windows 可能沒有啟用自動播放功能，或其功能無法正常執行。為了使一鍵安裝功能執行順暢，您可能需要自行撰寫 BAT 文件，並將其儲存在 Office Tool Plus 的根目錄中，以便 Office Tool Plus 建立 ISO 檔時能將其一同納入。
+In some cases, the autoplay may not be enabled on the Windows client or it may not work properly. To use one-click installation, we need to create batch file and save it to the root directory of Office Tool Plus. Office Tool Plus will pack up the files when creating Office ISO.
 
-::: tip 提示
-BAT 檔案不可使用非英文字元命名，否則將無法正常納入至 Office ISO 中。
+::: tip Tip
+You MUST save the batch files using English name. Non-English characters is not allowed.
 
-ConfigForISO.xml 是在建立 Office ISO 時，由 Office Tool Plus 自動產生，您需要確保建立包含預設配置的 Office ISO。
+ConfigForISO.xml created by Office Tool Plus, make sure you are creating Office ISO with default configuration.
 :::
 
-正常情況下，如果您只建立單項版本的 Office ISO (例如 32 位元)，則我們可以撰寫以下的 BAT 檔案:
+For single edition of Office ISO (such as 32-bit)，we can create the batch file:
 
 **Setup.bat:**
 
@@ -82,9 +82,9 @@ ConfigForISO.xml 是在建立 Office ISO 時，由 Office Tool Plus 自動產生
 "Office Tool Plus.exe" /isoInstall
 ```
 
-執行以上命令時，Office Tool Plus 會自動尋找 ConfigForISO.xml 檔案，並自動對應系統環境以進行安裝。
+When the above command is executed, Office Tool Plus will look for `ConfigForISO.xml` and automatically start the installation.
 
-如果建立了 32 位元和 64 位元二合一的 Office 版本，則可以分別使用以下命令啟動安裝程式：
+For 32-bit and 64-bit, using these commands:
 
 **Setup-32.bat:**
 
@@ -104,6 +104,6 @@ ConfigForISO.xml 是在建立 Office ISO 時，由 Office Tool Plus 自動產生
 "Office Tool Plus.exe" /loadConfig %~dp0ConfigForISO.xml /SourcePath %~dp0 /edition 64
 ```
 
-執行以上命令時，Office Tool Plus 會根據參數尋找對應的 XML 載入，然後依指定的參數變更架構和來源路徑值以啟動安裝程式。
+When the above command is executed, Office Tool Plus will load the `ConfigForISO.xml`, and modifies the architecture and source path attribute values according to the specified parameters in order to start the installation.
 
-_注意：如果沒有特別需求，以上命令中的參數不需要使用雙引號包括，否則可能會因為字符串轉義而發生無法預料的問題。_
+_Note: If there is no special requirement, the parameters in the above commands do not need to be included with double quotes, otherwise unpredictable problems may occur._

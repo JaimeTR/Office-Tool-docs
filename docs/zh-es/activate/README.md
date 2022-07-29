@@ -1,104 +1,107 @@
-# 功能介紹
+# Function introduction
 
-購買有正版授權的用戶可直接開啟 Office 應用程式，登入 Microsoft 帳戶後，即可啟用 Office。
+Users who have already bought Office from Microsoft can activate by login Microsoft account to Office applications.
 
-如果曾經安裝過 Office，可能會因為先前的啟用數據殘留，而導致發生神秘的錯誤。遇到此類問題，可在「授權管理」或者「金鑰管理」中使用 [清除啟用資訊]。
+If you have activated Office before, you can clear the Office activation to avoid problems. Go to "License management" or "Key management" to find "Clear activation".
 
-## 授權說明
+## Licenses description
 
-### 零售版授權 (Retail)
+### Retail licenses
 
-零售版授權只能使用金鑰啟用，而 Microsoft 365 (Office 365)系列產品，只能透過登入 Microsoft 帳戶，來啟用 Microsft 365 (Office 365)。
+Retail licenses can only be activated with a key. For Microsoft 365 (_formerly Office 365_) product, they can only be activated by logging into a Microsoft account with a genuine license.
 
-目前大多數的零售版授權都可與 Microsoft 帳戶綁定，因此多數零售版產品的啟用不需要藉助 Office Tool Plus 即可完成。
+Most retail licenses are linked to a Microsoft account.
 
-### 大量授權版授權 (Volume)
+### Volume licenses
 
-大量授權版授權，可以使用金鑰、KMS、MAK 啟用。
+Volume licenses can be activated using a key, or using KMS.
 
-- MAK 意旨 **多次啟用金鑰** (Multiple Activation Key)。這種類型的金鑰有啟用數限制，可以在啟用數內多次啟用 Office。
-- KMS 啟用意旨 使用**金鑰管理服務** (Key Management Service)進行啟用。使用 KMS 啟用，需要設定 GVLK、 KMS 伺服器。
+- Multiple Activation Key has a maximum number of activations, you can use and activate Office multiple times.
+- Key Management Service activation requires the use of GVLK and the setup of a KMS host.
 
-在啟用數據不丟失的情況下，MAK 啟用是永久啟用。
+Activation with MAK is permanent if the activation information is not lost.
 
-KMS 續期策略由 KMS 伺服器決定。正常情況下，一次啟用的有效期是 180 天，每隔 7 天自動續期一次。
+The KMS renewal settings is determined by the KMS host. Typically, an activation is valid for 180 days and is renewed every 7 days.
 
-## 授權管理
+## License management
 
-系統上若沒有安裝 Office，或者安裝的 Office 的版本過舊，則 Office Tool Plus 不會讀取 Office 的授權資訊，也就不會在下拉列表中顯示授權列表。
+If you didn't install Office, or the existing version of Office is too old, Office Tool Plus will NOT read the Office license information, and will NOT show the license in the drop-down list.
 
-### 安裝授權
+### Install licenses
 
-您可以在列表中找到您需要的授權，選取後點選 [安裝授權] 即開始安裝。Office Tool Plus 為零售版授權內建了預設金鑰，為大量授權版授權內建了 GVLK 金鑰。
+You can find the license you need in the license drop-down list, and then click "install license" to start the operation.
 
-安裝授權時，原有的授權不會被取代也不會被刪除，各授權皆可共存。
+Office Tools Plus has integrated default keys for the retail licenses, and GVLK for the volume licenses. As a result, you can use KMS to activate your Office just after you installed the volume license without additionally installing GVLK.
 
-### 安裝其他授權
+When you are installing a license, the original licenses will NOT be covered, the licenses will coexist.
 
-如果您需要，您也可以安裝其他特殊授權。正常情況下，Office 授權檔案儲存在 `C:\Program Files\Microsoft Office\root\Licenses16`，您可以複製給其他電腦使用。使用此方式安裝授權，將不會安裝金鑰，需要您自行安裝金鑰。
+### Install other licenses
 
-### 重設授權狀態
+You can install other licenses if you need. Usually, Office licenses is stored at `C:\Program Files\Microsoft Office\root\Licenses16`, you can copy it to other computers. This feature will NOT install keys. You need to install it by yourself.
 
-此功能會將授權重置為未啟用狀態，可以選擇重設所有授權，也可以選擇重設特定授權。
+### Reset license status
 
-### 清除全部授權
+This function will reset the license status. You can choose to reset all licenses or a certain license.
 
-此功能會刪除系統上所有已安裝的 Office 授權，不會清除金鑰。
+### Clear all licenses
 
-## 金鑰管理
+This function will remove all Office licenses on your computer, but it will NOT delete the keys.
 
-### 安裝金鑰
+## Key management
 
-輸入一個完整的 Office 金鑰，即可進行金鑰的安裝。如果你在安裝密鑰的時候提示「軟體授權服務報告指出找不到產品 SKU。」，請確保你已經安裝該金鑰對應的授權。
+### Install key
 
-例如: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+Installs a product key (replaces existing key) with a provided product key. If you get a message "Product SKU is not found" when installing a key, please install the correct license first.
 
-### 移除金鑰
+An example of the key: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
 
-輸入金鑰的後五碼即可進行該金鑰的移除，你可以透過 [檢視啟用資訊] 找到金鑰資訊。
+### Uninstall key
 
-### 檢視安裝識別碼 (IID)
+Uninstalls an installed product key with the last five digits of the product key to uninstall, you can use "Display activation information" to find the key.
 
-此功能會顯示每個授權的安裝識別碼，此識別碼用於電話啟用時提供。
+### View Installation ID (IID)
 
-### 安裝確認識別碼 (CID)
+This function will display Installation ID for offline activation.
 
-此功能可以輸入確認識別碼，通常是電話啟用時使用。
+### Install Confirm ID (CID)
 
-## KMS 管理
+You can activate product with provided Confirmation ID.
 
-KMS 伺服器可以是一個功能變數名稱，也可以是一個 IP 地址。例如: kms.example.com 或者 192.168.123.1
+## KMS management
 
-KMS 伺服器預設埠號是 1688，如果需要，可以手動輸入指定埠號。
+KMS host can be a hostname，or an IP address.
+For example：`kms.example.com` or `192.168.123.1`
 
-您可以單獨設定連接埠，也可以和伺服器位址一同設定。當 KMS 連接埠不為空時，點選套用設定，將會同時套用連接埠設定。
+The default port of the KMS host is 1688，You may choose the custom port if necessary.
 
-## 清除啟用狀態
+You can only apply the port, or apply the port with the host address. If the KMS port is not empty, clicking "Set KMS host" will also save the port setting.
 
-此功能會刪除系統上所有的 Office 授權和金鑰，您的 Office 啟用狀態將會丟失。且如果不安裝新的授權，Office 應用程式將會在清除後第一次開啟的時候顯示錯誤。
+## Clear activation
 
-## 啟用步驟
+This function will delete all Office licenses and keys on your system. Your Office Activation status will be lost. And if you don't install new licenses, Office applications will report an error at the first time it starts.
 
-### 金鑰啟用 (線上啟用)
+## Activation steps
 
-在「金鑰管理」中，輸入你的 Office 產品金鑰，並點選 [安裝金鑰]，然後點選 [啟用] 即可。
+### Key activation (online activation)
 
-如果安裝金鑰時顯示「軟體授權服務報告指出找不到產品 SKU。」，先安裝對應的授權，然後再試。
+Type in your Office product key in "Key management" and click "install key", and click "activate".
 
-### 電話啟用 (離線啟用)
+If it reports a "product SKU not found" error,  install the correct license first.
 
-請確保您已安裝正確的金鑰，然後在金鑰管理的功能區中，點選 [檢視安裝識別碼]，將此組數字提交給 Microsoft (電話)，Microsoft 將提供您一組確認識別碼(CID)，將此組數字輸入並安裝即可。
+### Phone activation (offline activation)
 
-如果安裝密鑰時顯示「找不到產品 SKU。」，則先安裝對應的授權，然後重新嘗試。
+After you make sure you have installed the right key, click "view installation ID" in the menu of "key management", and install the CID you finally get.
 
-### KMS 啟用 (需連線 KMS 伺服器)
+If it reports a "product SKU not found" error,  install the correct license first.
 
-在「授權管理」中選取一個大量授權版 (Volume)授權並安裝，接著在 KMS 管理中設定一個 KMS 伺服器，並 [套用伺服器位址]，最後按下 [啟用] 即可。
+### KMS activation (Internet connection required)
 
-## 檢視啟用資訊
+Choose and install a volume license in "license management". Then set a KMS host in "KMS management". Click on "set KMS host" and then click "activate".
 
-此功能會顯示系統上已安裝金鑰的所有授權資訊，包括 SKU 識別碼、金鑰資訊和授權狀態。如果是 KMS 授權，亦會顯示 KMS 伺服器資訊等。
+## Display activation information
 
-## 檢視授權資訊
+This function will show the information of all the keys and licenses installed on your computer, including SKU ID, key information, and license(s) status. If you use KMS licenses, it will also show the information of the KMS host.
 
-此功能會顯示系統上所有授權的資訊，無論授權是否已安裝金鑰。
+## Display licenses information
+
+This function will show all the existing licenses on your computer, regardless of whether the license has a key installed.

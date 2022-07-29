@@ -216,12 +216,9 @@ module.exports = {
 					{ text: 'Activar', link: '/zh-es/activate/' },
 					{ text: 'Más', link: '/zh-es/others/toolbox' },
 					{ text: 'Blog', link: 'https://www.coolhub.top' },
-					{ text: 'Cotpear', link: 'https://www.cotpear.com?utm_source=docs-otp-web' },
 					{
 						text: 'Grupos', items: [
-							{ text: 'Telegram: 713837704', link: 'https://otp.landian.vip/grouplink/qq.html' },
-							{ text: 'Telegram: ot_channel_es', link: 'https://t.me/ot_channel_es' },
-							{ text: 'OTP: otp-es', link: 'https://go.cotpear.com/otp-es' },
+							{ text: 'Telegram', link: 'https://t.me/ot_channel_es' },
 						]
 					}
 				],
