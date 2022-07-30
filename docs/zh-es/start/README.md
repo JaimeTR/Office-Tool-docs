@@ -1,49 +1,49 @@
-# Welcome
+# Bienvenidos
 
 ## Introduction
 
-Office Tool Plus is a powerful and useful tool for Office Deployment.
+Office Tool Plus es una herramienta poderosa y útil para Office Deployment.
 
-Office Tool Plus is made based on [Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool) and [OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office). It can deploy Office easily. It has integrated the Thunder download engine so that you can download Office faster. Certainly, you can use the little functions provided by Office Tool Plus to manage and activate Office.
+Office Tool Plus se basa en [Office Deployment Tool](https://docs.microsoft.com/en-us/deployoffice/overview-office-deployment-tool) y [OSPP](https://docs.microsoft.com/en-us/DeployOffice/vlactivation/tools-to-manage-volume-activation-of-office). Puede implementar Office fácilmente. Ha integrado el motor de descarga Thunder para que puedas descargar Office más rápido. Ciertamente, puede usar las pequeñas funciones proporcionadas por Office Tool Plus para administrar y activar Office.
 
-The following products are supported:
+Se admiten los siguientes productos:
 
 - Microsoft 365.
 - Office 2016, 2019, 2021.
 - Visio 2016, 2019, 2021 and Online Plan 2.
-- Project 2016, 2019, 2021 and Online Desktop Client.
+- Project 2016, 2019, 2021 y Cliente de escritorio en línea.
 
-No matter what, Office Tool Plus is always your best helper.
+Pase lo que pase, Office Tool Plus es siempre su mejor ayudante.
 
-## Features
+## Características
 
-- Create Office installation configuration. The config can be exported to local, or imported from local or web.
-- Download Office, supporting `ALL` Office channels and `ALL` Office languages.
-- Install Office or modify the existing Office, such as adding new products and applications, or uninstalling products and applications.
-- Create Office ISO, supports default installation config and silent installation config.
-- Activate Office. Support online activation, phone activation and KMS activation.
-- Support Office activation management, including license management, key management and KMS management.
-- Change Office update channel, support upgrading/downgrading Office without reinstalling Office.
-- Remove Office. Force remove Office while it can’t be uninstalled in normal way, support Office from Office 2003 to the latest Office version.
-- Integrated Office tools, including resetting settings, fixing Office problems.
-- Convert Office documents, based on Office COM. it's fast and stable.
-- Personalize theme, you can build your special Office Tool Plus.
-- Advanced settings allow you to use more advanced features, such as Office internal channels.
+- Cree la configuración de instalación de Office. La configuración se puede exportar a local o importar desde local o web.
+- Descargue Office, compatible con `ALL` los canales de `ALL` Office y los idiomas de Office.
+- Instale Office o modifique el Office existente, como agregar nuevos productos y aplicaciones, o desinstalar productos y aplicaciones.
+- Create Office ISO, admite la configuración de instalación predeterminada y la configuración de instalación silenciosa.
+- Activa Oficina. Admite activación en línea, activación telefónica y activación KMS.
+- Admite la gestión de activación de Office, incluida la gestión de licencias, la gestión de claves y la gestión de KMS.
+- Cambie el canal de actualización de Office, admita la actualización o degradación de Office sin reinstalar Office.
+- Eliminar oficina. Fuerce la eliminación de Office mientras no se pueda desinstalar de forma normal, admita Office desde Office 2003 hasta la última versión de Office.
+- Herramientas de Office integradas, incluido el restablecimiento de la configuración y la solución de problemas de Office.
+- Convierta documentos de Office, basados ​​en Office COM. es rápido y estable.
+- Personalice el tema, puede crear su Office Tool Plus especial.
+- La configuración avanzada le permite usar funciones más avanzadas, como los canales internos de Office.
 
-::: warning Attention
+::: warning Atención
 
-1. Office documents converter may not be capable with 64-bit of Office, we will try to fix this problem in future releases. Before this issue gets fixed, please only use this function on 32-bit of Office.
-2. Office Tool Plus only provides activation management. You need to have a genuine license to activate your products.
+1. Es posible que el convertidor de documentos de Office no sea compatible con Office de 64 bits; intentaremos solucionar este problema en versiones futuras. Antes de que se solucione este problema, use esta función solo en Office de 32 bits.
+2. Office Tool Plus solo proporciona administración de activación. Debe tener una licencia genuina para activar sus productos.
 
 :::
 
-::: details About convert retail to volume edition
-Office license can coexist now, which means we can have more than one license at a time.
+::: Acerca de la conversión de edición minorista a volumen
+La licencia de Office puede coexistir ahora, lo que significa que podemos tener más de una licencia a la vez.
 
-You can install a volume license besides the existing activated retail license. If you activate the volume license, Office will show both the retail activation information and the volume activation information.
+Puede instalar una licencia por volumen además de la licencia minorista activada existente. Si activa la licencia por volumen, Office mostrará tanto la información de activación minorista como la información de activación por volumen.
 :::
 
-## Components and Structure
+## Componentes y Estructura
 
 ``` txt
 Office Tool
@@ -61,6 +61,6 @@ Office Tool
     └── Thunder (files related to Thunder download acceleration)
 ```
 
-Usually, Office Tool Plus will download the needed components and keep it the latest version automatically.
+Por lo general, Office Tool Plus descargará los componentes necesarios y mantendrá la última versión automáticamente.
 
-If some of the components are lost or cannot be downloaded automatically, we suggest you to re-download Office Tool Plus to fix this problem.
+Si algunos de los componentes se pierden o no se pueden descargar automáticamente, le sugerimos que vuelva a descargar Office Tool Plus para solucionar este problema.
